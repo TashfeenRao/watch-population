@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const productReducer = (state = initialState, action) => {
-  switch (action.typeOf) {
+  switch (action.type) {
     case FETCH_DATA_PENDING:
       return {
         ...state,
