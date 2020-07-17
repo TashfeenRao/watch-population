@@ -1,7 +1,7 @@
 import { fetchDataPending, fetchDataSuccess, fetchDataError } from './index';
 
 const fetchProducts = () => dispatch => {
-  dispatch(fetchDataPending());
+  //dispatch(fetchDataPending());
   fetch('https://open.exchangerate-api.com/v6/latest')
     .then(res => res.json())
     .then(res => {
@@ -9,7 +9,9 @@ const fetchProducts = () => dispatch => {
         throw (res.error);
       }
       dispatch(fetchDataSuccess(res.rates));
-      return res.rates;
+    })
+    .catch(error => {
+      dispatch(fetchDataError(error));
     });
 };
 export default fetchProducts;

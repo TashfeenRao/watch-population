@@ -1,10 +1,8 @@
-import { createStore, combineReducers } from 'redux';
+import { combineReducers } from 'redux';
 import { productReducer } from './productReducer';
+import loading from './loading';
 
-const reducers = combineReducers({
+export default combineReducers({
   products: productReducer,
+  loading,
 });
-
-const store = createStore(reducers);
-
-export default store;

@@ -6,23 +6,14 @@ const initialState = {
   error: null,
 };
 
-export const productReducer = (state = initialState, action) => {
+export const productReducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_DATA_PENDING:
-      return {
-        ...state,
-        pending: true,
-      };
+      return state.concat([action.pending]);
     case FETCH_DATA_SUCCESS:
-      return {
-        ...state,
-        products: action.payload,
-      };
+      return action.products;
     case FETCH_DATA_ERROR:
-      return {
-        ...state,
-        error: action.error,
-      };
+      return state.concat([action.error]);
 
     default:
       return state;
