@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import filterProducts from '../actions/filterProducts';
+import '../style/product.css';
 
 class Products extends Component {
   constructor(props) {
@@ -27,13 +28,13 @@ class Products extends Component {
     return (
       <div>
         <input type="text" name="input" onChange={e => this.filterCurrencies(e)} />
-        <ul>
+        <div className="currencyContainer">
           {filteredProducts().map((item, index) => (
-            <div key={index}>
-              <li>{item[0]}</li>
+            <div key={index} className="currencyBox">
+              <p>{item[0]}</p>
             </div>
           ))}
-        </ul>
+        </div>
       </div>
     );
   }
