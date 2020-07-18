@@ -1,7 +1,8 @@
-import { FETCH_DATA_PENDING, FETCH_DATA_SUCCESS, FETCH_DATA_ERROR } from './contants';
+import { FETCH_COUNTRY_NAME, FETCH_DATA_SUCCESS, FETCH_DATA_ERROR, CHANGE_FILTER } from './contants';
 
-export const fetchDataPending = () => ({
-  type: FETCH_DATA_PENDING,
+export const fetchCountryName = countries => ({
+  type: FETCH_COUNTRY_NAME,
+  countries,
 });
 
 export const fetchDataSuccess = products => ({
@@ -12,4 +13,9 @@ export const fetchDataSuccess = products => ({
 export const fetchDataError = error => ({
   type: FETCH_DATA_ERROR,
   error,
+});
+
+export const changeFilter = input => ({
+  type: CHANGE_FILTER,
+  input,
 });
