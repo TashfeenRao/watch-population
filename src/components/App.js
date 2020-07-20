@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Container from 'react-bootstrap/Container';
 import Products from './Products';
 import fetchProducts from '../actions/fetchProducts';
 import fetchCountries from '../actions/fetchCountries';
@@ -16,7 +17,9 @@ class App extends Component {
     if (pending === true) return <h1>Loading</h1>;
     return (
       <div className="App">
-        <Products />
+        <Container>
+          <Products />
+        </Container>
       </div>
     );
   }
