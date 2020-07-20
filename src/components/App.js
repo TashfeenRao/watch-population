@@ -19,7 +19,6 @@ class App extends Component {
     return (
       <div className="App">
         <Products />
-        <Route exact path="/item/:id?" component={SingleItem} />
       </div>
     );
   }

@@ -14,7 +14,6 @@ const SingleItem = props => {
   return (
     <div>
       <h1>
-        tesingg
         {prodArray[id]}
       </h1>
     </div>
