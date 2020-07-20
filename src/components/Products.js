@@ -3,6 +3,7 @@
 /* eslint-disable no-console */
 /* eslint-disable react/no-array-index-key */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import filterProducts from '../actions/filterProducts';
 import '../style/product.css';
@@ -22,7 +23,6 @@ class Products extends Component {
     const {
       products, filters,
     } = this.props;
-    console.log();
     const prodArray = Object.entries(products);
     const filteredProducts = () => ((filters !== '') ? prodArray.filter(prod => prod[0] === filters.toUpperCase()) : prodArray);
     return (
@@ -30,10 +30,13 @@ class Products extends Component {
         <input type="text" name="input" onChange={e => this.filterCurrencies(e)} />
         <div className="currencyContainer">
           {filteredProducts().map((item, index) => (
-            <div key={index} className="currencyBox">
-              <p>{item[0]}</p>
-            </div>
+            <Link to={`/item/${index}`} key={index}>
+              <div className="currencyBox">
+                <p>{item[0]}</p>
+              </div>
+            </Link>
           ))}
+
         </div>
       </div>
     );
