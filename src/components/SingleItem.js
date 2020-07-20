@@ -14,7 +14,7 @@ const SingleItem = props => {
   return (
     <div>
       <h1>
-        {prodArray[id]}
+        {products[id].name}
       </h1>
     </div>
   );

@@ -23,10 +23,7 @@ class Products extends Component {
     const {
       products, filters,
     } = this.props;
-    const prodArray = Object.entries(products);
-    const filteredProducts = () => ((filters !== '') ? prodArray.filter(prod => prod[0].includes(filters.toUpperCase())) : prodArray);
-    // if (filteredProducts.length === 0) return <h1>Nothing found</h1>;
-    console.log(filteredProducts().length);
+    const filteredProducts = () => ((filters !== '') ? products.filter(prod => prod.name.toLowerCase().includes(filters.toLowerCase())) : products);
     return (
       <div>
         <input type="text" name="input" onChange={e => this.filterCurrencies(e)} />
@@ -34,7 +31,7 @@ class Products extends Component {
           {filteredProducts().map((item, index) => (
             <Link to={`/item/${index}`} key={index}>
               <div className="currencyBox">
-                <p>{item[0]}</p>
+                <p>{item.name}</p>
               </div>
             </Link>
           ))}
