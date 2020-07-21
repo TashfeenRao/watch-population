@@ -17,7 +17,7 @@ class App extends Component {
     const { pending, error } = this.props;
     if (pending === true || error === true) {
       return (
-        <div className="text-center">
+        <div className="text-center pt-5">
           <div className="spinner-grow spinner" role="status">
             <span className="sr-only">Loading...</span>
           </div>

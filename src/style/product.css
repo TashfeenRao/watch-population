@@ -6,6 +6,9 @@
 .companyBox {
     background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
 }
+.search-button {
+    background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%) !important;
+}
 
 .companyBox:hover {
     background-color: #000000;

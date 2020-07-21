@@ -39,10 +39,10 @@ class Products extends Component {
       <Container>
         <Form.Group className="mt-2">
           <Form.Row>
-            <Button variant="info" size="md" disabled>
+            <Button variant="info" size="md" disabled className="search-button">
               Filter By
             </Button>
-            <Col>
+            <Col className="pl-0 pr-0">
               <Form.Control size="lg" type="text" placeholder="Company Name" onChange={e => this.filterCurrencies(e)} />
             </Col>
           </Form.Row>
