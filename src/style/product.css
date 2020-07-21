@@ -11,3 +11,9 @@
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000 0%, #923cb5 74%);
 }
+
+.spinner {
+    width: 10rem;
+    height: 10rem;
+    color: #5f72bd;
+}
