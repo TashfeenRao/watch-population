@@ -10,11 +10,12 @@ const SingleItem = props => {
   const products = useSelector(state => state.products);
   const loading = useSelector(state => state.loading);
   const prodArray = Object.entries(products);
+  //        {products[id].name}
   if (loading === true) return <h1>loading</h1>;
   return (
     <div>
       <h1>
-        {products[id].name}
+        {prodArray[id]}
       </h1>
     </div>
   );
