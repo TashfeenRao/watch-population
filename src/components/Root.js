@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 import { Provider } from 'react-redux';
 import App from './App';
 import Nav from './nav';
@@ -10,14 +11,16 @@ import Footer from './footer';
 const Root = props => {
   const { store } = props;
   return (
-    <Provider store={store}>
-      <Router>
-        <Route path="/" component={Nav} />
-        <Route exact path="/" component={App} />
-        <Route exact path="/item/:id?" component={SingleItem} />
-        <Route path="/" component={Footer} />
-      </Router>
-    </Provider>
+    <Container fluid>
+      <Provider store={store}>
+        <Router>
+          <Route path="/" component={Nav} />
+          <Route exact path="/" component={App} />
+          <Route exact path="/item/:id?" component={SingleItem} />
+          <Route path="/" component={Footer} />
+        </Router>
+      </Provider>
+    </Container>
   );
 };
 Root.prototype = {
