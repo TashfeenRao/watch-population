@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import App from './App';
 import Nav from './nav';
 import SingleItem from './SingleItem';
+import Footer from './footer';
 
 const Root = props => {
   const { store } = props;
@@ -14,6 +15,7 @@ const Root = props => {
         <Route path="/" component={Nav} />
         <Route exact path="/" component={App} />
         <Route exact path="/item/:id?" component={SingleItem} />
+        <Route path="/" component={Footer} />
       </Router>
     </Provider>
   );

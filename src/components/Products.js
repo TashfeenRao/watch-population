@@ -50,8 +50,9 @@ class Products extends Component {
             <CardColumns>
               {filteredProducts().map((item, index) => (
                 <Link to={`/item/${index}`} key={index}>
-                  <Card bg="primary" text="white" className="text-center p-3">
+                  <Card text="white" className="text-center p-3 companyBox">
                     <blockquote className="blockquote mb-0 card-body">
+                      <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form</p>
                       <p>
                         {item[0]}
                       </p>

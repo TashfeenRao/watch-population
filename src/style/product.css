@@ -3,15 +3,11 @@
     flex-wrap: wrap;
 }
 
-.currencyBox {
-    width: 100px;
-    height: 100px;
-    background-color: blueviolet;
-    border: 1px solid black;
-    justify-items: center;
-    cursor: pointer;
+.companyBox {
+    background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
 }
 
-.currencyBox:hover {
-    background-color: white;
+.companyBox:hover {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #923cb5 74%);
 }
