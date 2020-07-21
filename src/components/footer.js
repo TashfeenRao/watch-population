@@ -6,7 +6,9 @@ import Col from 'react-bootstrap/Col';
 const Footer = () => (
   <Row className="nav-row">
     <Col>
-      <h1>All Rigths Resered</h1>
+      <footer>
+        <h1 className="text-white text-center pt-2">All Rigths Resered</h1>
+      </footer>
     </Col>
   </Row>
 );

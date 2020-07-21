@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Products from './Products';
 import fetchProducts from '../actions/fetchProducts';
+import Footer from './footer';
 import '../style/product.css';
 
 class App extends Component {
@@ -25,10 +26,11 @@ class App extends Component {
       );
     }
     return (
-      <Container>
+      <Container fluid>
         <Row>
           <Products />
         </Row>
+        <Footer />
       </Container>
     );
   }
