@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -29,6 +30,17 @@ class App extends Component {
     );
   }
 }
+App.defaultProps = {
+  dispatch: () => undefined,
+  error: '',
+  pending: false,
+};
+
+App.propTypes = {
+  dispatch: PropTypes.func,
+  error: PropTypes.string,
+  pending: PropTypes.bool,
+};
 
 export default connect(state => ({
   pending: state.loading,
