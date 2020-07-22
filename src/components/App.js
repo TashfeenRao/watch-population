@@ -26,11 +26,13 @@ class App extends Component {
       );
     }
     return (
-      <Container fluid>
-        <Row>
+      <Container fluid className="pl-0 pr-0">
+        <Row className="m-0">
           <Products />
         </Row>
-        <Footer />
+        <Row className="nav-row m-0">
+          <Footer />
+        </Row>
       </Container>
     );
   }
