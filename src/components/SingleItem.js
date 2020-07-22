@@ -3,6 +3,8 @@ import { useSelector, connect } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
 import Image from 'react-bootstrap/Image';
 import { useParams } from 'react-router-dom';
 import fetchProducts from '../actions/fetchProducts';
@@ -19,13 +21,18 @@ const SingleItem = props => {
   return (
     <Container className="text-white text-center">
       <Row>
-        <Col className="d-flex">
+        <Col className="d-flex align-items-center">
           <Image src={require('../images/USD.svg')} roundedCircle />
-          <h2>Google</h2>
+          <div>
+            <h2>Google</h2>
+            <h4>CEO</h4>
+            <a href="#" target="_blank">http://investor.fb.com</a>
+          </div>
         </Col>
       </Row>
       <Row>
         <Col>
+          <h3>Description</h3>
           <p>
             Apple Inc. designs, manufactures, and markets smartphones,
             personal computers, tablets, wearables, and accessories worldwide.
@@ -48,6 +55,38 @@ const SingleItem = props => {
       </Row>
       <Row>
         <Col>
+          <CardColumns>
+            <Card text="white" className="text-center p-3 companyBox company-detail">
+              <Card.Body>
+                <Card.Title>symbol: AAPL</Card.Title>
+                <Card.Text>
+                  <p>exchange: Nasdaq Global Select</p>
+                  <p>exchangeShortName: NASDAQ</p>
+                  <p>industry: Internet Content & Information</p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card text="white" className="text-center p-3 companyBox company-detail">
+              <Card.Body>
+                <Card.Title>price: 389.21</Card.Title>
+                <Card.Text>
+                  <p>beta: 1.228499</p>
+                  <p>lastDiv: 3.13</p>
+                  <p>changes: 1.21</p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card text="white" className="text-center p-3 companyBox company-detail">
+              <Card.Body>
+                <Card.Title>country: United States</Card.Title>
+                <Card.Text>
+                  <p>address: One Apple Park Way</p>
+                  <p>state: CA</p>
+                  <p>phone: 408-996-1010</p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </CardColumns>
         </Col>
       </Row>
     </Container>

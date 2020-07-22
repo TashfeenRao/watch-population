@@ -34,6 +34,7 @@ class Products extends Component {
     const prodArray = Object.entries(products);
     const filteredProducts = () => ((filters !== '') ? prodArray.filter(prod => prod[0].includes(filters.toUpperCase())) : prodArray);
     // const filteredProducts = () => ((filters !== '') ? products.filter(prod => prod.name.toLowerCase().includes(filters.toLowerCase())) : products);
+    //    <img src={require('../images/USD.svg')} alt="logo" />
     return (
       <Container>
         <Form.Group className="mt-2">
@@ -52,7 +53,6 @@ class Products extends Component {
               {filteredProducts().map((item, index) => (
                 <Link to={`/item/${index}`} key={index}>
                   <Card text="white" className="text-center p-3 companyBox">
-                    <img src={require('../images/USD.svg')} alt="logo" />
                     <blockquote className="blockquote mb-0 card-body">
                       <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form</p>
                       <p>
