@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../style/product.css';
 
 const Spinner = () => (
   <div className="text-center pt-5">

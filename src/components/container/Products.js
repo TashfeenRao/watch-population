@@ -1,8 +1,3 @@
-/* eslint-disable global-require */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable no-console */
-/* eslint-disable react/no-array-index-key */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -13,8 +8,8 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import CardColumns from 'react-bootstrap/CardColumns';
-import filterProducts from '../actions/filterProducts';
-import '../style/product.css';
+import filterProducts from '../../actions/filterProducts';
+import '../../style/product.css';
 
 class Products extends Component {
   constructor(props) {

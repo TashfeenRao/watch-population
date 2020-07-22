@@ -1,7 +1,6 @@
 import React from 'react';
-import '../style/nav.css';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import '../../style/nav.css';
 
 const Footer = () => (
   <Col className="nav-row">

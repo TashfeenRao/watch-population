@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import { Provider } from 'react-redux';
 import App from './App';
-import Nav from './nav';
+import Nav from '../presentational/nav';
 import SingleItem from './SingleItem';
-import Footer from './footer';
+import Footer from '../presentational/footer';
 
 const Root = props => {
   const { store } = props;
