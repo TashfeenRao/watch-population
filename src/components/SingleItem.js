@@ -19,7 +19,7 @@ const SingleItem = props => {
   return (
     <Container className="text-white text-center">
       <Row>
-        <Col xs={6} md={4} className="d-flex">
+        <Col className="d-flex">
           <Image src={require('../images/USD.svg')} roundedCircle />
           <h2>Google</h2>
         </Col>
