@@ -8,6 +8,7 @@ import CardColumns from 'react-bootstrap/CardColumns';
 import Image from 'react-bootstrap/Image';
 import { useParams } from 'react-router-dom';
 import fetchProducts from '../actions/fetchProducts';
+import Spinner from './presentational/spinner';
 
 const SingleItem = props => {
   const { id } = useParams();
@@ -17,7 +18,7 @@ const SingleItem = props => {
   const loading = useSelector(state => state.loading);
   const prodArray = Object.entries(products);
   //        {products[id].name}
-  if (loading === true) return <h1>loading</h1>;
+  if (loading === true) return <Spinner />;
   return (
     <Container className="text-white text-center">
       <Row>
