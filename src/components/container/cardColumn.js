@@ -3,38 +3,34 @@ import { connect } from 'react-redux';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import Nothing from '../presentational/nothing';
 
 const CardColumn = props => {
   const {
     products, filters,
   } = props;
-      // const filteredProducts = () => ((filters !== '') ? products.filter(prod => prod.name.toLowerCase().includes(filters.toLowerCase())) : products);
-    //    <img src={require('../images/USD.svg')} alt="logo" />
-  const prodArray = Object.entries(products);
-  const filteredProducts = () => ((filters !== '') ? prodArray.filter(prod => prod[0].includes(filters.toUpperCase())) : prodArray);
+  const filteredProducts = () => ((filters !== '') ? products.filter(prod => prod.symbol.toLowerCase().includes(filters.toLowerCase())) : products);
+  //    <img src={require('../images/USD.svg')} alt="logo" />
   return (
     <CardColumns>
       {filteredProducts().map((item, index) => (
-        <Link to={`/item/${index}`} key={index}>
+        <Link to={`/item/${index}`} key={item.symbol}>
           <Card text="white" className="text-center p-3 companyBox">
             <blockquote className="blockquote mb-0 card-body">
-              <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form</p>
+              <img src={item.image} alt="logo" />
+              <p>{item.companyName}</p>
               <p>
-                {item[0]}
+                {item.symbol}
               </p>
-              <footer className="blockquote-footer">
-                <small className="text-muted">
-                  Someone famous in
-                  {' '}
-                  <cite title="Source Title">Source Title</cite>
-                </small>
-              </footer>
+              <p>{item.price}</p>
+              <p>{item.exchangeShortName}</p>
+              <p>{item.country}</p>
             </blockquote>
           </Card>
         </Link>
       ))}
       {' '}
-      {(filteredProducts().length === 0) && (<h1>Nothing found</h1>)}
+      {(filteredProducts().length === 0) && (<Nothing />)}
     </CardColumns>
   );
 };

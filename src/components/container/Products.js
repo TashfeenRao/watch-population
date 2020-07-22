@@ -35,7 +35,7 @@ class Products extends Component {
           </Form.Row>
         </Form.Group>
         <Row>
-          <Col className="currencyContainer">
+          <Col className="currencyContainer justify-content-center">
             <CardColumn />
           </Col>
         </Row>
