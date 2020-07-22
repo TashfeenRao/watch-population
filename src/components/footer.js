@@ -7,7 +7,7 @@ const Footer = () => (
   <Row className="nav-row">
     <Col>
       <footer>
-        <h1 className="text-white text-center pt-2">All Rigths Resered</h1>
+        <h4 className="text-white text-center pt-2">All Rigths Resered</h4>
       </footer>
     </Col>
   </Row>

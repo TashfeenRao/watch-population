@@ -6,9 +6,9 @@ import Col from 'react-bootstrap/Col';
 
 const Nav = () => (
   <Row className="nav-row ml-0 mr-0">
-    <Col>
-      <Link to="/" className="text-decoration-none text-style" data-toggle="tooltip" title="Home">
-        <h1 className="text-white text-center pt-2 text-style">Stock Reviewer</h1>
+    <Col className="text-center">
+      <Link to="/" className="text-decoration-none text-style text-white" data-toggle="tooltip" title="Home">
+        Stock Reviewer
       </Link>
     </Col>
   </Row>
