@@ -1,8 +1,11 @@
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 import Nothing from '../presentational/nothing';
 
@@ -11,18 +14,24 @@ const CardColumn = props => {
     products, filters,
   } = props;
   const filteredProducts = () => ((filters !== '') ? products.filter(prod => prod.symbol.toLowerCase().includes(filters.toLowerCase())) : products);
-  //    <img src={require('../images/USD.svg')} alt="logo" />
   return (
     <CardColumns>
       {filteredProducts().map((item, index) => (
         <Link to={`/item/${index}`} key={item.symbol}>
           <Card text="white" className="text-center p-3 companyBox">
+            <Image src={require(`../../images/${item.symbol}.svg`)} roundedCircle />
             <blockquote className="blockquote mb-0 card-body">
               <p>{item.companyName}</p>
               <p>
+                Symbol:
+                {' '}
                 {item.symbol}
               </p>
+              Price:
+              {' '}
               <p>{item.price}</p>
+              Country:
+              {' '}
               <p>{item.country}</p>
             </blockquote>
           </Card>

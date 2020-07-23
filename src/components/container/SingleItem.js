@@ -24,12 +24,15 @@ const SingleItem = props => {
         <Col className="d-flex align-items-center">
           <Image src={products[id].image} roundedCircle />
           <div>
+            {' '}
             <h2>{products[id].companyName}</h2>
             <h4>
+              {' '}
               CEO:
+              {' '}
               {products[id].ceo}
             </h4>
-            <a href={products[id].website} target="_blank" rel="noreferrer">http://investor.fb.com</a>
+            <a href={products[id].website} target="_blank" rel="noreferrer">Website: http://investor.fb.com</a>
           </div>
         </Col>
       </Row>
@@ -37,6 +40,7 @@ const SingleItem = props => {
         <Col>
           <h3>Description</h3>
           <p>
+            {' '}
             {products[id].description}
           </p>
         </Col>
@@ -48,19 +52,23 @@ const SingleItem = props => {
               <Card.Body>
                 <Card.Title>
                   symbol:
+                  {' '}
                   {products[id].symbol}
                 </Card.Title>
                 <Card.Text>
                   <p>
                     exchange:
+                    {' '}
                     {products[id].exchange}
                   </p>
                   <p>
                     exchangeShortName:
+                    {' '}
                     {products[id].exchangeShortName}
                   </p>
                   <p>
                     industry:
+                    {' '}
                     {products[id].industry}
                   </p>
                 </Card.Text>
@@ -70,19 +78,23 @@ const SingleItem = props => {
               <Card.Body>
                 <Card.Title>
                   price:
+                  {' '}
                   {products[id].price}
                 </Card.Title>
                 <Card.Text>
                   <p>
                     beta:
+                    {' '}
                     {products[id].beta}
                   </p>
                   <p>
                     lastDiv:
+                    {' '}
                     {products[id].lastDiv}
                   </p>
                   <p>
                     changes:
+                    {' '}
                     {products[id].changes}
                   </p>
                 </Card.Text>
@@ -92,19 +104,23 @@ const SingleItem = props => {
               <Card.Body>
                 <Card.Title>
                   country:
+                  {' '}
                   {products[id].country}
                 </Card.Title>
                 <Card.Text>
                   <p>
                     address:
+                    {' '}
                     {products[id].address}
                   </p>
                   <p>
                     state:
+                    {' '}
                     {products[id].state}
                   </p>
                   <p>
                     phone:
+                    {' '}
                     {products[id].phone}
                   </p>
                 </Card.Text>
