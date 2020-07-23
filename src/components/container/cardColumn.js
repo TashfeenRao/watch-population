@@ -13,7 +13,7 @@ const CardColumn = props => {
   const {
     products, filters,
   } = props;
-  const filteredProducts = () => ((filters !== '') ? products.filter(prod => prod.symbol.toLowerCase().includes(filters.toLowerCase())) : products);
+  const filteredProducts = () => ((filters !== '') ? products.filter(prod => prod.companyName.toLowerCase().includes(filters.toLowerCase())) : products);
   return (
     <CardColumns>
       {filteredProducts().map((item, index) => (
