@@ -32,7 +32,9 @@ const SingleItem = props => {
               {' '}
               {products[id].ceo}
             </h4>
-            <a href={products[id].website} target="_blank" rel="noreferrer">Website: http://investor.fb.com</a>
+            Website:
+            {' '}
+            <p>{[id].website}</p>
           </div>
         </Col>
       </Row>
