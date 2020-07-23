@@ -1,4 +1,6 @@
-import { FETCH_COUNTRY_NAME, FETCH_DATA_SUCCESS, FETCH_DATA_ERROR, CHANGE_FILTER } from './contants';
+import {
+  FETCH_COUNTRY_NAME, FETCH_DATA_SUCCESS, FETCH_DATA_ERROR, CHANGE_FILTER,
+} from './contants';
 
 export const fetchCountryName = countries => ({
   type: FETCH_COUNTRY_NAME,

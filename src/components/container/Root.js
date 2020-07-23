@@ -23,7 +23,22 @@ const Root = props => {
     </Container>
   );
 };
-Root.prototype = {
-  store: PropTypes.object.isRequired,
+Root.defaultProps = {
+  store: [
+    {
+      loading: false,
+      input: '',
+      error: '',
+    },
+  ],
+};
+Root.propTypes = {
+  store: PropTypes.arrayOf(
+    PropTypes.shape({
+      loading: PropTypes.bool,
+      input: PropTypes.string,
+      error: PropTypes.string,
+    }),
+  ),
 };
 export default Root;

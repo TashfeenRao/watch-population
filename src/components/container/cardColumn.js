@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Card from 'react-bootstrap/Card';
@@ -17,13 +18,11 @@ const CardColumn = props => {
         <Link to={`/item/${index}`} key={item.symbol}>
           <Card text="white" className="text-center p-3 companyBox">
             <blockquote className="blockquote mb-0 card-body">
-              <img src={item.image} alt="logo" />
               <p>{item.companyName}</p>
               <p>
                 {item.symbol}
               </p>
               <p>{item.price}</p>
-              <p>{item.exchangeShortName}</p>
               <p>{item.country}</p>
             </blockquote>
           </Card>
@@ -33,6 +32,24 @@ const CardColumn = props => {
       {(filteredProducts().length === 0) && (<Nothing />)}
     </CardColumns>
   );
+};
+
+CardColumn.defaultProps = {
+  products: [],
+  filters: '',
+  filter: () => undefined,
+  toLowerCase: () => undefined,
+};
+CardColumn.propTypes = {
+  filters: PropTypes.string,
+  filter: PropTypes.func,
+  toLowerCase: PropTypes.func,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      companyName: PropTypes.string,
+      symbol: PropTypes.string,
+    }),
+  ),
 };
 export default connect(state => ({
   products: state.products,

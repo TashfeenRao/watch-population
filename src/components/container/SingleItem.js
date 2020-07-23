@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector, connect } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -16,7 +17,6 @@ const SingleItem = props => {
   dispatch(fetchProducts());
   const products = useSelector(state => state.products);
   const loading = useSelector(state => state.loading);
-  //        {products[id].name}
   if (loading === true) return <Spinner />;
   return (
     <Container className="text-white text-center">
@@ -115,5 +115,12 @@ const SingleItem = props => {
       </Row>
     </Container>
   );
+};
+
+SingleItem.defaultProps = {
+  dispatch: () => undefined,
+};
+SingleItem.propTypes = {
+  dispatch: PropTypes.func,
 };
 export default connect()(SingleItem);
