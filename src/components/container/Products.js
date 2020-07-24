@@ -26,7 +26,7 @@ class Products extends Component {
       <Container>
         <Form.Group className="mt-2">
           <Form.Row>
-            <Button variant="info" size="md" disabled className="search-button">
+            <Button variant="info" size="md" disabled data-testid="filter" className="search-button">
               Filter By
             </Button>
             <Col className="pl-0 pr-0">
