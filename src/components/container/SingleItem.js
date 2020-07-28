@@ -25,8 +25,8 @@ const SingleItem = props => {
           <Image src={products[id].image} roundedCircle />
           <div>
             {' '}
-            <h2>{products[id].companyName}</h2>
-            <h4>
+            <h2 data-testid="company-name">{products[id].companyName}</h2>
+            <h4 data-testid="ceo">
               {' '}
               CEO:
               {' '}
