@@ -54,7 +54,7 @@ $ npm start
 
 ## Screen Shot
 
-comming Soon
+![screenshot](final.png)
 
 ## Live version
 
