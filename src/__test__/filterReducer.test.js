@@ -9,6 +9,15 @@ describe('Filter Reducer', () => {
     const newState = filterReducer(undefined, {});
     expect(newState).toEqual(initialState);
   });
+  test('should display Filter Reducer output', () => {
+    const initialState = '';
+    const input = 'write any name to filter';
+    expect(filterReducer(initialState, {
+      type: CHANGE_FILTER,
+      input,
+    })).toEqual(input);
+  });
+
   test('it display change filter input', () => {
     const input = 'fb';
     const expectResult = {
