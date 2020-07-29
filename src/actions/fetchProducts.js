@@ -2,8 +2,8 @@ import { fetchDataSuccess } from './index';
 import errorProducts from './errorProducts';
 
 const fetchProducts = () => dispatch => {
-  const request = 'https://financialmodelingprep.com/api/v3/profile/AAPL,FB,GOOG,MSFT,AMZN,DIS,INTC,IBM,ORCL,DELL,SPY?apikey=a85da6244e7b24d77e96ddcce0990509';
-  fetch('https://financialmodelingprep.com/api/v3/profile/AAPL,FB,GOOG,MSFT,AMZN,DIS,INTC,IBM,ORCL,DELL,SPY?apikey=a85da6244e7b24d77e96ddcce0990509')
+  const request = 'https://financialmodelingprep.com/api/v3/profile/AAPL,FB,GOOG,MSFT,AMZN,DIS,INTC,IBM,ORCL,DELL,SPY?apikey=8f88a46060b33de20abc8be89dd23809';
+  fetch(request)
     .then(res => res.json())
     .then(res => {
       if (res.error) {
