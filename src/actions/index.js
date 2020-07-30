@@ -1,10 +1,10 @@
 import {
-  FETCH_COUNTRY_NAME, FETCH_DATA_SUCCESS, FETCH_DATA_ERROR, CHANGE_FILTER,
+  FETCH_DATA_SUCCESS, FETCH_DATA_ERROR, CHANGE_FILTER, FETCH_COUNTRY_SUCCESS,
 } from './contants';
 
-export const fetchCountryName = countries => ({
-  type: FETCH_COUNTRY_NAME,
-  countries,
+export const fetchCountryName = country => ({
+  type: FETCH_COUNTRY_SUCCESS,
+  country,
 });
 
 export const fetchDataSuccess = products => ({

@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Products from './Products';
 import fetchProducts from '../../actions/fetchProducts';
 import Spinner from '../presentational/spinner';
+import fetchCountry from '../../actions/fetchCountry';
 import '../../style/product.css';
 
 class App extends Component {
@@ -16,7 +17,8 @@ class App extends Component {
 
   render() {
     const { pending, error } = this.props;
-    if (pending === true || error === true) return <Spinner />;
+    if (pending === true) return <Spinner />;
+    if (error === true) return <h1>Error</h1>;
     return (
       <Container fluid className="pl-0 pr-0">
         <Row className="m-0">
@@ -28,15 +30,11 @@ class App extends Component {
 }
 App.defaultProps = {
   dispatch: () => undefined,
-  error: [''],
   pending: false,
 };
 
 App.propTypes = {
   dispatch: PropTypes.func,
-  error: PropTypes.arrayOf(
-    PropTypes.string,
-  ),
   pending: PropTypes.bool,
 };
 

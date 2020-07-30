@@ -15,7 +15,7 @@ const Root = props => {
         <Router>
           <Route path="/" component={Nav} />
           <Route exact path="/" component={App} />
-          <Route exact path="/item/:id?" component={SingleItem} />
+          <Route exact path="/item/:name?" component={SingleItem} />
         </Router>
       </Provider>
     </Container>
