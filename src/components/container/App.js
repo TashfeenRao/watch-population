@@ -28,13 +28,15 @@ class App extends Component {
 }
 App.defaultProps = {
   dispatch: () => undefined,
-  error: '',
+  error: [''],
   pending: false,
 };
 
 App.propTypes = {
   dispatch: PropTypes.func,
-  error: PropTypes.string,
+  error: PropTypes.arrayOf(
+    PropTypes.string,
+  ),
   pending: PropTypes.bool,
 };
 

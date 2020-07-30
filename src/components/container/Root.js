@@ -22,21 +22,19 @@ const Root = props => {
   );
 };
 Root.defaultProps = {
-  store: [
-    {
-      loading: false,
-      input: '',
-      error: '',
-    },
-  ],
+  store: {
+    loading: false,
+    input: '',
+    error: [''],
+  },
 };
 Root.propTypes = {
-  store: PropTypes.arrayOf(
-    PropTypes.shape({
-      loading: PropTypes.bool,
-      input: PropTypes.string,
-      error: PropTypes.string,
-    }),
-  ),
+  store: PropTypes.shape({
+    loading: PropTypes.bool,
+    input: PropTypes.string,
+    error: PropTypes.arrayOf(
+      PropTypes.string,
+    ),
+  }),
 };
 export default Root;
