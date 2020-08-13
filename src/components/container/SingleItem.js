@@ -11,13 +11,12 @@ class SingleItem extends Component {
   componentDidMount() {
     const { name } = this.props;
     const { dispatch } = this.props;
-    console.log(name);
     dispatch(fetchCountry(name));
   }
 
   render() {
-    const { country, loading } = this.props;
-    if (loading === true) return <Spinner />;
+    const { country, pending } = this.props;
+    if (pending === true) return <Spinner />;
     return (
       <CardColumns>
         {country.map(item => (
@@ -44,5 +43,5 @@ SingleItem.propTypes = {
 };
 export default connect(state => ({
   country: state.country,
-  loading: state.loading,
+  pending: state.loading,
 }))(SingleItem);

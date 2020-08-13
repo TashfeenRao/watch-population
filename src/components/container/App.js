@@ -6,7 +6,6 @@ import Row from 'react-bootstrap/Row';
 import Products from './Products';
 import fetchProducts from '../../actions/fetchProducts';
 import Spinner from '../presentational/spinner';
-import fetchCountry from '../../actions/fetchCountry';
 import '../../style/product.css';
 
 class App extends Component {
