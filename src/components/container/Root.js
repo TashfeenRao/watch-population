@@ -5,7 +5,8 @@ import Container from 'react-bootstrap/Container';
 import { Provider } from 'react-redux';
 import App from './App';
 import Nav from '../presentational/nav';
-import SingleItem from './SingleItem';
+import GetName from './GetName';
+import CountryPop from './CountryPop';
 
 const Root = props => {
   const { store } = props;
@@ -15,7 +16,8 @@ const Root = props => {
         <Router>
           <Route path="/" component={Nav} />
           <Route exact path="/" component={App} />
-          <Route exact path="/item/:name?" component={SingleItem} />
+          <Route exact path="/item/:name?" component={GetName} />
+          <Route exact path="/year/:year?/:name?/" component={CountryPop} />
         </Router>
       </Provider>
     </Container>
