@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-    React Bookstore
+    Watch Population
   <br>
 </h1>
 
@@ -40,10 +40,10 @@
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/TashfeenRao/stock-reviewer
+$ git clone https://github.com/TashfeenRao/watch-population
 
 # Go into the repository
-$ cd stock-reviewer
+$ cd watch-population
 
 # Install dependencies
 $ npm install
@@ -58,7 +58,7 @@ $ npm start
 
 ## Live version
 
-https://stock-reviewer.netlify.app/
+https://watch-population.netlify.app/
 
 ## Emailware
 

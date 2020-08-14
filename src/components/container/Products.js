@@ -30,7 +30,7 @@ class Products extends Component {
               Filter By
             </Button>
             <Col className="pl-0 pr-0">
-              <Form.Control size="lg" type="text" placeholder="Company Name" onChange={e => this.filterCurrencies(e)} />
+              <Form.Control size="lg" type="text" placeholder="Country" onChange={e => this.filterCurrencies(e)} />
             </Col>
           </Form.Row>
         </Form.Group>
