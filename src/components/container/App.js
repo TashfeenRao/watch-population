@@ -15,9 +15,8 @@ class App extends Component {
   }
 
   render() {
-    const { pending, error } = this.props;
+    const { pending } = this.props;
     if (pending === true) return <Spinner />;
-    if (error === true) return <h1>Error</h1>;
     return (
       <Container fluid className="pl-0 pr-0">
         <Row className="m-0">
@@ -39,5 +38,4 @@ App.propTypes = {
 
 export default connect(state => ({
   pending: state.loading,
-  error: state.error,
 }))(App);

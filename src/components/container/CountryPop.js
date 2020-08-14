@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -7,7 +8,6 @@ const CountryPop = props => {
   const { year } = useParams();
   const { country } = props;
   const countryYearPop = country.filter(item => item.popyear === year);
-  countryYearPop.map(i => console.log(i.id));
   return (
     <div>
       {countryYearPop.map(p => (
@@ -38,6 +38,18 @@ const CountryPop = props => {
       ))}
     </div>
   );
+};
+
+CountryPop.defaultProps = {
+  country: [],
+};
+CountryPop.propTypes = {
+  country: PropTypes.arrayOf(
+    PropTypes.shape({
+      iso3: PropTypes.string,
+      title: PropTypes.string,
+    }),
+  ),
 };
 
 export default connect(state => ({

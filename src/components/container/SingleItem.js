@@ -16,6 +16,7 @@ class SingleItem extends Component {
 
   render() {
     const { country, pending } = this.props;
+    console.log(pending)
     if (pending === true) return <Spinner />;
     return (
       <CardColumns>
@@ -37,9 +38,20 @@ class SingleItem extends Component {
 
 SingleItem.defaultProps = {
   dispatch: () => undefined,
+  country: [],
+  pending: false,
+  name: '',
 };
 SingleItem.propTypes = {
   dispatch: PropTypes.func,
+  country: PropTypes.arrayOf(
+    PropTypes.shape({
+      iso3: PropTypes.string,
+      title: PropTypes.string,
+    }),
+  ),
+  pending: PropTypes.bool,
+  name: PropTypes.string,
 };
 export default connect(state => ({
   country: state.country,

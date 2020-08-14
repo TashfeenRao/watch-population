@@ -1,5 +1,3 @@
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -36,17 +34,15 @@ const CardColumn = props => {
 CardColumn.defaultProps = {
   products: [],
   filters: '',
-  filter: () => undefined,
   toLowerCase: () => undefined,
 };
 CardColumn.propTypes = {
   filters: PropTypes.string,
-  filter: PropTypes.func,
   toLowerCase: PropTypes.func,
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      companyName: PropTypes.string,
-      symbol: PropTypes.string,
+      iso3: PropTypes.string,
+      title: PropTypes.string,
     }),
   ),
 };
