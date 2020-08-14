@@ -16,7 +16,6 @@ class SingleItem extends Component {
 
   render() {
     const { country, pending } = this.props;
-    console.log(pending)
     if (pending === true) return <Spinner />;
     return (
       <CardColumns>

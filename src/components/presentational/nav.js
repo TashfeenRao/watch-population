@@ -8,7 +8,7 @@ const Nav = () => (
   <Row className="nav-row ml-0 mr-0">
     <Col className="text-center">
       <Link to="/" className="text-decoration-none text-style text-white" data-toggle="tooltip" title="Home">
-        Stock Reviewer
+        Watch Population
       </Link>
     </Col>
   </Row>
