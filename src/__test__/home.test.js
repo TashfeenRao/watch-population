@@ -9,6 +9,6 @@ describe('Home', () => {
   });
   test('it render title', () => {
     render(<BrowserRouter><Nav /></BrowserRouter>);
-    expect(screen.getByText(/Stock Reviewer/)).toBeInTheDocument();
+    expect(screen.getByText(/Watch Population/)).toBeInTheDocument();
   });
 });
